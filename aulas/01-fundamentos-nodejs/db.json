@@ -1,1 +1,14 @@
-{"users":[{"id":"ad96404c-77de-4f11-87ae-37b42ddcb211","name":"Gabriel","email":"gabrielomelhorzin@gmail.com"},{"id":"a4c7505b-79e9-44fa-9555-3e958a0d8671","name":"Elias the best","email":"eliasomelhorzin@gmail.com"}]}
+{
+    "users": [
+        {
+            "id": "ad96404c-77de-4f11-87ae-37b42ddcb211",
+            "name": "Gabriel",
+            "email": "gabrielomelhorzin@gmail.com"
+        },
+        {
+            "id": "a4c7505b-79e9-44fa-9555-3e958a0d8671",
+            "name": "Elias the best",
+            "email": "eliasomelhorzin@gmail.com"
+        }
+    ]
+}
