@@ -33,8 +33,24 @@ import http from 'node:http'
 // HTTP Status Code
 const users = []
 
-const server = http.createServer((request, response) => {
+const server = http.createServer(async (request, response) => {
     const { method, url } = request
+
+    const buffers = []
+
+    for await (const chunk of request) {
+        buffers.push(chunk)
+    }
+
+    // const fullStreamContent = Buffer.concat(buffers).toString()
+
+    try {
+        request.body = JSON.parse(Buffer.concat(buffers).toString())
+    } catch {
+        request.body = null
+    }
+
+    console.log(request.body)
     
     // console.log(method, url)
     // GET /
@@ -45,10 +61,12 @@ const server = http.createServer((request, response) => {
     }
 
     if (method == 'POST' && url == '/users') {
+        const { name, email } = request.body
+
         users.push({
             id: 1,
-            name: 'Gabriel Gontijo',
-            email: 'gontijogabr@gmail.com',
+            name,
+            email,
         })
         return response.writeHead(201).end()
     }
