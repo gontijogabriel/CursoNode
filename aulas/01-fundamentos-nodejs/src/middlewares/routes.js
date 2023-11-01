@@ -6,15 +6,22 @@ const database = new Database()
 
 export const routes = [
     {
-        method: 'GET',
-        path: buildRoutePath('/users'),
-        handle: (request, response) => {
-            console.log(request.query)
-
-            const users = database.select('users')
-
-            return response.end(JSON.stringify(users))
-        }
+        method: "GET",
+        path: buildRoutePath("/users"),
+        handle: (req, res) => {
+          const { search } = req.query;
+          const users = database.select(
+            "users",
+            search
+              ? {
+                  name: search,
+                  email: search,
+                }
+              : null
+          );
+    
+          return res.end(JSON.stringify(users));
+        },
     },
     {
         method: 'POST',
