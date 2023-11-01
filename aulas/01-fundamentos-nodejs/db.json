@@ -1,19 +1,19 @@
 {
     "users": [
         {
-            "id": 1,
-            "name": "Elias 1",
+            "id": "c0330755-5477-4130-9032-6fb5eb272b99",
+            "name": "Elias",
             "email": "eliasmelhorzin@gmail.com"
         },
         {
-            "id": 1,
-            "name": "Elias 2",
-            "email": "eliasmelhorzin@gmail.com"
+            "id": "093267fe-8e7c-4834-a3f3-b15afb0801a4",
+            "name": "Gabriel",
+            "email": "gabrielmelhorzin@gmail.com"
         },
         {
-            "id": 1,
-            "name": "Elias 4",
-            "email": "eliasmelhorzin@gmail.com"
+            "id": "f4a97194-12ef-40b5-9f40-18c1a9b77290",
+            "name": "Pigurito",
+            "email": "piguritomelhorzin@gmail.com"
         }
     ]
 }
